@@ -1,5 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+import { act } from "react-dom/test-utils";
 import Question from "../components/Question";
 
 const testQuestion = {
@@ -29,19 +30,25 @@ test("creates an interval with setInterval", () => {
 test("decrements the timer by 1 every second", () => {
   render(<Question question={testQuestion} onAnswered={noop} />);
   expect(screen.queryByText(/10 seconds remaining/)).toBeInTheDocument();
-  jest.advanceTimersByTime(1000);
-  expect(screen.queryByText(/9 seconds remaining/)).toBeInTheDocument();
+  act(() => {
+    jest.advanceTimersByTime(1000);
+    expect(screen.queryByText(/9 seconds remaining/)).toBeInTheDocument();
+  });
 });
 
 test("calls onAnswered after 10 seconds", () => {
   const onAnswered = jest.fn();
   render(<Question question={testQuestion} onAnswered={onAnswered} />);
-  jest.advanceTimersByTime(10000);
-  expect(onAnswered).toHaveBeenCalledWith(false);
+  act(() => {
+    jest.advanceTimersByTime(11000);
+    expect(onAnswered).toHaveBeenCalledWith(false);
+  });
 });
 
 test("clears the interval after each render", () => {
   render(<Question question={testQuestion} onAnswered={noop} />);
-  jest.advanceTimersByTime(10000);
-  expect(clearInterval).toHaveBeenCalled();
+  act(() => {
+    jest.advanceTimersByTime(11000);
+    expect(clearInterval).toHaveBeenCalled();
+  });
 });

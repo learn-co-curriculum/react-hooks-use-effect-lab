@@ -35,8 +35,12 @@ Make sure to pay attention to any warning/error messages in the console as a
 result of using `useEffect`, and clean them up by providing any necessary
 _dependencies_ in the second argument of `useEffect`.
 
+If you're stuck on getting the interval working, or encountering some strange
+behavior, make sure to check out the resources below!
+
 ## Resources
 
+- [setInterval in Using Hooks](https://upmostly.com/tutorials/setinterval-in-react-components-using-hooks)
 - [React Docs on useEffect][useeffect-hook]
 - [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/)
 
