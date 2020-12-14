@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Press Start 2p", cursive;
+  background: rgb(2, 162, 152);
+  background: linear-gradient(
+    90deg,
+    rgb(25, 216, 204) 0%,
+    rgba(33, 246, 233, 1) 100%
+  );
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1em;
+}
+
+button {
+  font-family: "Press Start 2p", cursive;
+  font-size: 1rem;
+  border: 3px solid black;
+  padding: 0.5rem 1rem;
+  background-color: rgba(252, 124, 124, 0.75);
+  box-shadow: inset -3px -3px 0 0 rgb(252, 124, 124);
+  transition: all 0.1s ease-in;
+  margin: 1rem;
+}
+
+main {
+  margin: 4rem auto;
+  max-width: 700px;
+  height: 500px;
+  min-height: 500px;
+  background: white;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+section {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
