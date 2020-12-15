@@ -5,9 +5,9 @@
 In the labs for this section, we're going to be building a trivia app! The first
 feature we're going to work on is the Question component.
 
-There is some starter code for us to work with. There's a Question component
+There is some starter code for us to work with. There's a `Question` component
 already set up to display the question and a list of possible answers. It's also
-hooked up to its parent component, App, so that it has access to all the props
+hooked up to its parent component, `App`, so that it has access to all the props
 it needs.
 
 The feature we're going to build out using `useEffect` is a **countdown timer**,
@@ -15,11 +15,11 @@ so that the user has to answer each question within 10 seconds.
 
 ## Deliverables
 
-When the Question component renders, create a side effect using `useEffect` and
+When the `Question` component renders, create a side effect using `useEffect` and
 use `setInterval` to run a callback function every 1 second.
 
-Inside the callback function, use the `setTimeRemaining` function to decrease
-the amount of time remaining by 1 every 1 second.
+Inside the callback function for `setInterval`, use the `setTimeRemaining`
+function to decrease the amount of time remaining by 1 every 1 second.
 
 When the `timeRemaining` hits 0, do the following:
 
