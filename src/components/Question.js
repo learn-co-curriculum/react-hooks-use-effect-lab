@@ -4,19 +4,25 @@ function Question({ question, onAnswered }) {
   const [timeRemaining, setTimeRemaining] = useState(10);
 
   useEffect(() => {
-    const timerId = setInterval(() => {
-      if (timeRemaining > 0) {
-        setTimeRemaining(timeRemaining - 1);
-      } else {
-        setTimeRemaining(10);
-        onAnswered(false);
-      }
+    if (timeRemaining === 0) {
+      setTimeRemaining(10);
+      onAnswered(false);
+      return; // exit early!
+    }
+
+    // set up a timeout to run after 1 second
+    const timerId = setTimeout(() => {
+      // decrement the time remaining
+      setTimeRemaining((timeRemaining) => timeRemaining - 1);
     }, 1000);
 
+    // clean up after the timeout in case the component unmounts before the timer is done
     return function () {
-      clearInterval(timerId);
+      clearTimeout(timerId);
     };
   }, [timeRemaining, onAnswered]);
+  // we want to run the effect every time timeRemaining changes
+  // onAnswered is also a dependency, even though it doesn't change
 
   const { id, prompt, answers, correctIndex } = question;
 
