@@ -16,9 +16,9 @@ so that the user has to answer each question within 10 seconds.
 ## Deliverables
 
 When the `Question` component renders, create a side effect using `useEffect` and
-use `setInterval` to run a callback function every 1 second.
+use `setTimeout` to run a callback function after 1 second.
 
-Inside the callback function for `setInterval`, use the `setTimeRemaining`
+Inside the callback function for `setTimeout`, use the `setTimeRemaining`
 function to decrease the amount of time remaining by 1 every 1 second.
 
 When the `timeRemaining` hits 0, do the following:
@@ -28,8 +28,7 @@ When the `timeRemaining` hits 0, do the following:
 - call the `onAnswered` callback prop with a value of false
   (`onAnswered(false)`), to trigger some behavior in the App component.
 
-You should _also_ use the **cleanup function** for `useEffect` to clear the
-interval between renders.
+You should _also_ use the **cleanup function** for `useEffect` to clean up after the timeout function.
 
 Make sure to pay attention to any warning/error messages in the console as a
 result of using `useEffect`, and clean them up by providing any necessary
@@ -40,7 +39,7 @@ behavior, make sure to check out the resources below!
 
 ## Resources
 
-- [setInterval in Using Hooks](https://upmostly.com/tutorials/setinterval-in-react-components-using-hooks)
+- [setTimeout Using Hooks](https://upmostly.com/tutorials/settimeout-in-react-components-using-hooks)
 - [React Docs on useEffect][useeffect-hook]
 - [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/)
 
