@@ -40,8 +40,8 @@ behavior, make sure to check out the resources below!
 ## Resources
 
 - [setTimeout Using Hooks](https://upmostly.com/tutorials/settimeout-in-react-components-using-hooks)
-- [React Docs on useEffect][useeffect-hook]
+- [React Docs on useEffect][use-effect-hook]
 - [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/)
 
 [side-effects]: https://en.wikipedia.org/wiki/Side_effect_(computer_science)#:~:text=In%20computer%20science%2C%20an%20operation,the%20invoker%20of%20the%20operation.
-[useeffect-hook]: https://reactjs.org/docs/hooks-effect.html
+[use-effect-hook]: https://reactjs.org/docs/hooks-effect.html
