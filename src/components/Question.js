@@ -24,6 +24,11 @@ function Question({ question, onAnswered }) {
   // we want to run the effect every time timeRemaining changes
   // onAnswered is also a dependency, even though it doesn't change
 
+  function handleAnswer(isCorrect) {
+    setTimeRemaining(10);
+    onAnswered(isCorrect);
+  }
+
   const { id, prompt, answers, correctIndex } = question;
 
   return (
@@ -31,9 +36,9 @@ function Question({ question, onAnswered }) {
       <h1>Question {id}</h1>
       <h3>{prompt}</h3>
       {answers.map((answer, index) => {
-        const isCorrectAnswer = index === correctIndex;
+        const isCorrect = index === correctIndex;
         return (
-          <button key={answer} onClick={() => onAnswered(isCorrectAnswer)}>
+          <button key={answer} onClick={() => handleAnswer(isCorrect)}>
             {answer}
           </button>
         );

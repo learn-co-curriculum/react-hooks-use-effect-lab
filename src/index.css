@@ -32,6 +32,7 @@ button {
   box-shadow: inset -3px -3px 0 0 rgb(252, 124, 124);
   transition: all 0.1s ease-in;
   margin: 1rem;
+  cursor: pointer;
 }
 
 main {
