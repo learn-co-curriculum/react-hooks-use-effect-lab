@@ -28,19 +28,20 @@ When the `timeRemaining` hits 0, do the following:
 - call the `onAnswered` callback prop with a value of false
   (`onAnswered(false)`), to trigger some behavior in the App component.
 
-You should _also_ use the **cleanup function** for `useEffect` to clean up after the timeout function.
+You should _also_ use the **cleanup function** for `useEffect` to clean up after
+the timeout function.
 
 Make sure to pay attention to any warning/error messages in the console as a
 result of using `useEffect`, and clean them up by providing any necessary
 _dependencies_ in the second argument of `useEffect`.
 
-If you're stuck on getting the interval working, or encountering some strange
+If you're stuck on getting the timer working, or encountering some strange
 behavior, make sure to check out the resources below!
 
 ## Resources
 
-- [setTimeout Using Hooks](https://upmostly.com/tutorials/settimeout-in-react-components-using-hooks)
 - [React Docs on useEffect][use-effect-hook]
+- [setTimeout Using Hooks](https://upmostly.com/tutorials/settimeout-in-react-components-using-hooks)
 - [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/)
 
 [side-effects]: https://en.wikipedia.org/wiki/Side_effect_(computer_science)#:~:text=In%20computer%20science%2C%20an%20operation,the%20invoker%20of%20the%20operation.
