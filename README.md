@@ -1,5 +1,10 @@
 # React useEffect Lab
 
+## Learning Goals
+
+- Use the `useEffect` hook with the dependencies array
+- Use a cleanup function with `useEffect` to stop background processes
+
 ## Overview
 
 In the labs for this section, we're going to be building a trivia app! The first
@@ -44,5 +49,4 @@ behavior, make sure to check out the resources below!
 - [setTimeout Using Hooks](https://upmostly.com/tutorials/settimeout-in-react-components-using-hooks)
 - [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/)
 
-[side-effects]: https://en.wikipedia.org/wiki/Side_effect_(computer_science)#:~:text=In%20computer%20science%2C%20an%20operation,the%20invoker%20of%20the%20operation.
 [use-effect-hook]: https://reactjs.org/docs/hooks-effect.html
