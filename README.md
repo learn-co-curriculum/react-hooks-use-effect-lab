@@ -26,7 +26,7 @@ use `setTimeout` to run a callback function after 1 second.
 Inside the callback function for `setTimeout`, use the `setTimeRemaining`
 function to decrease the amount of time remaining by 1 every 1 second.
 
-When the `timeRemaining` hits 0, do the following:
+When `timeRemaining` hits 0, do the following:
 
 - reset `timeRemaining` back to 10 seconds, so our next question will have a
   fresh timer; and
